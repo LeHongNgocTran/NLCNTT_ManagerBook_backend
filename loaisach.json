@@ -1,0 +1,12 @@
+[
+    {
+        "_id": "ML1",
+        "maLoai": "ML1",
+        "tenLoaiSach": "Công nghệ thông tin"
+    },
+    {
+        "_id": "ML2",
+        "maLoai": "ML2",
+        "tenLoaiSach": "Ngoại ngữ"
+    }
+]

@@ -1,0 +1,164 @@
+[
+    {
+        "_id": "S1",
+        "maNXB": "NXB1",
+        "maloai": "ML1",
+        "masach": "S1",
+        "tensach": "Machine Learning Cơ Bản",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-machine-learning-co-ban.jpg",
+        "stt": {
+            "$numberInt": "1"
+        },
+        "maday": {
+            "$numberInt": "1"
+        },
+        "make": {
+            "$numberInt": "1"
+        },
+        "trangthai": false
+    },
+    {
+        "_id": "S2",
+        "maNXB": "NXB2",
+        "maloai": "ML1",
+        "masach": "S2",
+        "tensach": "Công Nghệ Blockchain",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-cong-nghe-blockchain.jpg",
+        "stt": {
+            "$numberInt": "2"
+        },
+        "maday": {
+            "$numberInt": "1"
+        },
+        "make": {
+            "$numberInt": "1"
+        },
+        "trangthai": false
+    },
+    {
+        "_id": "S3",
+        "maNXB": "NXB3",
+        "maloai": "ML1",
+        "masach": "S3",
+        "tensach": "Laravel 5 Cookbook Enhance Your Amazing Applications",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-laravel-5-cookbook-enhance-your-amazing-applications.jpg",
+        "stt": {
+            "$numberInt": "3"
+        },
+        "maday": {
+            "$numberInt": "1"
+        },
+        "make": {
+            "$numberInt": "1"
+        },
+        "trangthai": false
+    },
+    {
+        "_id": "S4",
+        "maNXB": "NXB4",
+        "maloai": "ML1",
+        "masach": "S4",
+        "tensach": "Machine Learning Cơ Bản",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-machine-learning-co-ban.jpg",
+        "stt": {
+            "$numberInt": "4"
+        },
+        "maday": {
+            "$numberInt": "1"
+        },
+        "make": {
+            "$numberInt": "1"
+        },
+        "trangthai": false
+    },
+    {
+        "_id": "S5",
+        "maNXB": "NXB5",
+        "maloai": "ML2",
+        "masach": "S5",
+        "tensach": "Tự Học Tiếng Anh Hiệu Quả",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-tu-hoc-tieng-anh-hieu-qua.jpg",
+        "stt": {
+            "$numberInt": "1"
+        },
+        "maday": {
+            "$numberInt": "2"
+        },
+        "make": {
+            "$numberInt": "2"
+        },
+        "trangthai": false
+    },
+    {
+        "_id": "S6",
+        "maNXB": "NXB1",
+        "maloai": "ML2",
+        "masach": "S6",
+        "tensach": "3000 Từ Vựng Tiếng Anh Thông Dụng Nhất",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-3000-tu-vung-tieng-anh-thong-dung-nhat.jpg",
+        "stt": {
+            "$numberInt": "2"
+        },
+        "maday": {
+            "$numberInt": "2"
+        },
+        "make": {
+            "$numberInt": "2"
+        },
+        "trangthai": false
+    },
+    {
+        "_id": "S7",
+        "maNXB": "NXB2",
+        "maloai": "ML1",
+        "masach": "S7",
+        "tensach": "360 Động Từ Bất Quy Tắc Và 12 Thì Cơ Bản Trong Tiếng Anh",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-360-dong-tu-bat-quy-tac-va-12-thi-co-ban-trong-tieng-anh.jpg",
+        "stt": {
+            "$numberInt": "3"
+        },
+        "maday": {
+            "$numberInt": "2"
+        },
+        "make": {
+            "$numberInt": "2"
+        },
+        "trangthai": false
+    },
+    {
+        "_id": "S8",
+        "maNXB": "NXB3",
+        "maloai": "ML2",
+        "masach": "S8",
+        "tensach": "Ngữ Pháp Tiếng Anh Ôn Thi Toeic",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-ngu-phap-tieng-anh-on-thi-toeic.jpg",
+        "stt": {
+            "$numberInt": "4"
+        },
+        "maday": {
+            "$numberInt": "2"
+        },
+        "make": {
+            "$numberInt": "2"
+        },
+        "trangthai": false
+    },
+    {
+        "_id": "S9",
+        "maNXB": "NXB4",
+        "maloai": "ML1",
+        "masach": "S9",
+        "tensach": "Giải Thuật Và Lập Trình",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-giai-thuat-va-lap-trinh.jpg",
+        "stt": {
+            "$numberInt": "5"
+        },
+        "maday": {
+            "$numberInt": "1"
+        },
+        "make": {
+            "$numberInt": "1"
+        },
+        "trangthai": true
+    }
+]

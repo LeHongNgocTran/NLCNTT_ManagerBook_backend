@@ -1,0 +1,20 @@
+[
+    {
+    "_id": "TK1",
+    "username" : "B1910317",
+    "password":"123456",
+    "phanquyen": 1 
+    },
+    {
+        "_id": "TK2",
+        "username" : "thuthu1",
+        "password":"123456",
+        "phanquyen": 2 
+    },
+    {
+        "_id": "TK3",
+        "username" : "admin",
+        "password":"123456",
+        "phanquyen": 23
+    }
+]

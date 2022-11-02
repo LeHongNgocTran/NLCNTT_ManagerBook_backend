@@ -1,0 +1,86 @@
+[
+    {
+        "_id": "B1910317",
+        "mataikhoan": "B1910317",
+        "masinhvien": "B1910317",
+        "hoten": "Lê Hồng Ngọc Trân",
+        "ngaysinh": {
+            "$date": {
+                "$numberLong": "999907200000"
+            }
+        },
+        "diachi": "Hậu Giang",
+        "lop": "DI19V7A7",
+        "sdt": "0389006211"
+    },
+    {
+        "_id": "B1910402",
+        "mataikhoan": "B1910402",
+        "masinhvien": "B1910402",
+        "hoten": "Trần Thị Kim Linh",
+        "ngaysinh": {
+            "$date": {
+                "$numberLong": "997833600000"
+            }
+        },
+        "diachi": "Đồng Tháp",
+        "lop": "DI19V7A4",
+        "sdt": "0123456789"
+    },
+    {
+        "_id": "B1910408",
+        "mataikhoan": "B1910408",
+        "masinhvien": "B1910408",
+        "hoten": "Lê Thị Yến Lụa",
+        "ngaysinh": {
+            "$date": {
+                "$numberLong": "999795600000"
+            }
+        },
+        "diachi": "Hậu Giang",
+        "lop": "DI19V7A8",
+        "sdt": "0123456789"
+    },
+    {
+        "_id": "B1910411",
+        "mataikhoan": "B1910411",
+        "masinhvien": "B1910411",
+        "hoten": "Nguyễn Thị Huế Minh",
+        "ngaysinh": {
+            "$date": {
+                "$numberLong": "992563200000"
+            }
+        },
+        "diachi": "Vĩnh Long",
+        "lop": "DI19V7A8",
+        "sdt": "0123456789"
+    },
+    {
+        "_id": "B1910467",
+        "mataikhoan": "B1910467",
+        "masinhvien": "B1910467",
+        "hoten": "Nguyễn Quốc Trạng",
+        "ngaysinh": {
+            "$date": {
+                "$numberLong": "987033600000"
+            }
+        },
+        "diachi": "Cà Mau",
+        "lop": "DI19V7A8",
+        "sdt": "0123456789"
+    },
+    {
+        "_id": "B1910468",
+        "mataikhoan": "B1910468",
+        "masinhvien": "B1910468",
+        "hoten": "Nguyễn Linh Trâm",
+        "ngaysinh": {
+            "$date": {
+                "$numberLong": "992106000000"
+            }
+        },
+        "diachi": "Cần Thơ",
+        "lop": "DI19F1A1",
+        "sdt": "0123456789"
+    }
+]
