@@ -2,25 +2,28 @@
 const express = require("express");
 const cors = require("cors");
 const ApiError = require("./app/api-error");
-const managerRouter = require("./app/routes/manager.route");
 
+const bookRouter = require("./app/routes/book.route");
+const phieumuonRouter = require("./app/routes/phieumuon.route");
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-
-
-app.use("/api/managerlibrary", managerRouter);
+// Router của sách
+app.use("/api/book",bookRouter);
+//Router của phiếu mượn
+app.use("/api/phieumuon",phieumuonRouter);
+//Router của phiếu mượn cần được gia hạn
 
 // Handle 404 respone
 app.use((req, res, next) => {
   // Code ở đây sẽ chạy khi không có route được định nghĩa nào
   // khớp với yêu cầu. Gọi next() để chuyển sang middleware xử lý lỗi
   // thể hiện lỗi 404
-  return next(new ApiError(404, "Resource not foundfdghjk"));
+  return next(new ApiError(404, "Resource not found"));
 });
 
-//// define error-handling middleware last, after other app.use() and routes calls
+// define error-handling middleware last, after other app.use() and routes calls
 
 app.use((error, req, res, next) => {
   // Middleware xử lý lỗi tập trung.

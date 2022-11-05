@@ -20,25 +20,61 @@ exports.getAll = async (req, res, next) => {
   try {
     const bookService = new BookService(MongoDB.client);
     documents = await bookService.getAll();
-    console.log(documents[0]);
+    // console.log(documents);
   } catch (error) {
     return next(new ApiError(500, "An error occured while get book"));
   }
-  return res.send(documents[0]);
+  return res.send(documents);
 };
 
-exports.findOne = (req, res) => {
-  res.send({ message: "findOne handler" });
+exports.getId = async (req, res, next) => {
+  try {
+    console.log("fgg");
+    const bookService = new BookService(MongoDB.client);
+    const document = await bookService.findById(req.params.id);
+    console.log(document);
+    if (!document) {
+      return next(new ApiError(404, "Contact not found"));
+    }
+    return res.send(document);
+  } catch (error) {
+    return next(
+      new ApiError(500, `Error retrieving contact with id=${req.params.id}`)
+    );
+  }
+};
+exports.delete = async (req, res, next) => {
+  try {
+    const bookService = new BookService(MongoDB.client);
+    const document = await bookService.delete(req.params.id);
+    if (!document) {
+      return next(new ApiError(404, "Contact was deleted successfully"));
+    }
+    return res.send(document);
+  } catch (error) {
+    return next(
+      new ApiError(500, `Could not delete contact with id=${req.params.id}`)
+    );
+  }
 };
 
-exports.update = (req, res) => {
-  res.send({ message: "update handler" });
-};
+exports.update = async (req, res, next) => {
+  if (Object.keys(req.body).length === 0) {
+    return next(new ApiError(400, "Data to update can not be empty"));
+  }
 
-exports.delete = (req, res) => {
-  res.send({ message: "delete handler" });
-};
-
-exports.deleteAll = (req, res) => {
-  res.send({ message: "deleteAll handler" });
+  try {
+    const bookService = new BookService(MongoDB.client);
+    const document = await bookService.update(req.params.id, req.body);
+    if (!document) {
+      return next(new ApiError(404, "Contact not found"));
+    }
+    return res.send({
+      message: "Contact was updated successfully",
+    });
+  } catch (error) {
+    return next(
+      new ApiError(500, `Error updating contact with id=${req.params.id}`)
+    );
+  }
 };

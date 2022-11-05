@@ -8,5 +8,10 @@
         "_id": "ML2",
         "maLoai": "ML2",
         "tenLoaiSach": "Ngoại ngữ"
+    },
+    {
+        "_id" : "ML3",
+        "maLoai" : "ML3",
+        "tenLoaisach" : "Khoa Học Kỹ Thuật"
     }
 ]

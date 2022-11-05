@@ -1,0 +1,110 @@
+[
+    {
+        "masach": "S1",
+        "tensach": "Machine Learning Cơ Bản",
+        "tentacgia": "Vũ Hữu Tiệp",
+        "tenloai": "Công nghệ thông tin",
+        "tenNXB": "Nhà xuất bản Trẻ",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-machine-learning-co-ban.jpg",
+        "stt": 1,
+        "soke": 1,
+        "tenday": "Công nghệ thông tin",
+        "trangthai": false
+    },
+    {
+        "masach": "S2",
+        "tentacgia": "Nhiều tác giả",
+        "tensach": "Công Nghệ Blockchain",
+        "tenloai": "Công nghệ thông tin",
+        "tenNXB": "Nhà xuất bản Kim Đồng",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-cong-nghe-blockchain.jpg",
+        "stt": 2,
+        "soke": 1,
+        "tenday": "Công nghệ thông tin",
+        "trangthai": false
+    },
+    {
+        "masach": "S3",
+        "tentacgia": "Nathan Wu",
+        "tensach": "Laravel 5 Cookbook Enhance Your Amazing Applications",
+        "tenloai": "Công nghệ thông tin",
+        "tenNXB": "Nhà xuất bản Tổng hợp thành phố Hồ Chí Minh",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-laravel-5-cookbook-enhance-your-amazing-applications.jpg",
+        "stt": 3,
+        "soke": 1,
+        "tenday": "Công nghệ thông tin",
+        "trangthai": false
+    },
+    {
+        "masach": "S4",
+        "tentacgia": "Jess Chadwick - Todd Snyder",
+        "tensach": "Programming ASP.NET MVC 4",
+        "tenloai": "Công nghệ thông tin",
+        "tenNXB": "Nhà xuất bản Tổng hợp thành phố Hồ Chí Minh",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-programming-asp-net-mvc-4.jpg",
+        "stt": 4,
+        "soke": 1,
+        "tenday": "Công nghệ thông tin",
+        "trangthai": false
+    },
+    {
+        "masach": "S5",
+        "tentacgia": "Nguyễn Thị Hà Bắc",
+        "tensach": "Tự Học Tiếng Anh Hiệu Quả",
+        "tenloai": "Ngoại ngữ",
+        "tenNXB": "Nhà xuất bản Tổng hợp thành phố Hồ Chí Minh",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-tu-hoc-tieng-anh-hieu-qua.jpg",
+        "stt": 1,
+        "soke": 2,
+        "tenday": "Ngoại Ngữ",
+        "trangthai": false
+    },
+    {
+        "masach": "S6",
+        "tentacgia": "Nhiều tác giả",
+        "tensach": "3000 Từ Vựng Tiếng Anh Thông Dụng Nhất",
+        "tenloai": "Ngoại ngữ",
+        "tenNXB": "Nhà xuất bản Trẻ",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-3000-tu-vung-tieng-anh-thong-dung-nhat.jpg",
+        "stt": 2,
+        "soke": 2,
+        "tenday": "Ngoại Ngữ",
+        "trangthai": false
+    },
+    {
+        "masach": "S7",
+        "tentacgia": "Nhiều tác giả",
+        "tensach": "360 Động Từ Bất Quy Tắc Và 12 Thì Cơ Bản Trong Tiếng Anh",
+        "tenloai": "Ngoại ngữ",
+        "tenNXB": "Nhà xuất bản Tổng hợp thành phố Hồ Chí Minh",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-360-dong-tu-bat-quy-tac-va-12-thi-co-ban-trong-tieng-anh.jpg",
+        "stt": 3,
+        "soke": 2,
+        "tenday": "Ngoại Ngữ",
+        "trangthai": false
+    },
+    {
+        "masach": "S8",
+        "tentacgia": "Nhiều tác giả",
+        "tensach": "Ngữ Pháp Tiếng Anh Ôn Thi Toeic",
+        "tenloai": "Ngoại ngữ",
+        "tenNXB": "Nhà xuất bản Tổng hợp thành phố Hồ Chí Minh",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-ngu-phap-tieng-anh-on-thi-toeic.jpg",
+        "stt": 4,
+        "soke": 2,
+        "tenday": "Ngoại Ngữ",
+        "trangthai": false
+    },
+    {
+        "masach": "S9",
+        "tentacgia": "Vũ Hữu Tiệp",
+        "tensach": "Giải Thuật Và Lập Trình",
+        "tenloai": "Công nghệ thông tin",
+        "tenNXB": "Nhà xuất bản Tổng hợp thành phố Hồ Chí Minh",
+        "imageUrl": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-giai-thuat-va-lap-trinh.jpg",
+        "stt": 5,
+        "soke": 1,
+        "tenday": "Công Nghệ Thông Tin",
+        "trangthai": true
+    }
+]
