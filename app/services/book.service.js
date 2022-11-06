@@ -60,5 +60,16 @@ class BookService {
     );
     return result.value;
   }
+
+  async find(filter){
+    const cursor = await this.Book.find(filter);
+    return await cursor.toArray();
+  }
+
+  async findByName(name){
+    return await this.find({
+      name : {$regex: new RegExp(name)}
+    });
+  }
 }
 module.exports = BookService;

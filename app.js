@@ -3,18 +3,24 @@ const express = require("express");
 const cors = require("cors");
 const ApiError = require("./app/api-error");
 
+const accountRouter = require('./app/routes/taikhoan.route');
 const bookRouter = require("./app/routes/book.route");
 const phieumuonRouter = require("./app/routes/phieumuon.route");
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+
 // Router của sách
 app.use("/api/book",bookRouter);
+
 //Router của phiếu mượn
 app.use("/api/phieumuon",phieumuonRouter);
-//Router của phiếu mượn cần được gia hạn
 
+//Router của tài khoản
+app.use("/api/account",accountRouter);
+
+//Router của phiếu mượn cần được gia hạn
 // Handle 404 respone
 app.use((req, res, next) => {
   // Code ở đây sẽ chạy khi không có route được định nghĩa nào

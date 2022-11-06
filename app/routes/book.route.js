@@ -6,9 +6,8 @@ const router = express.Router();
 // đoạn code xử lý.
 router.route("/")
     .get(books.getAll)
-    .post(books.create)
-    // .post(books.create)
-    // .delete(books.deleteAll);
+    .post(books.create);
+    
 router.route("/:id")
     .get(books.getId)
     .delete(books.delete)
