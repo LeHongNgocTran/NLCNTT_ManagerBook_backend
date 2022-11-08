@@ -3,9 +3,10 @@ const express = require("express");
 const cors = require("cors");
 const ApiError = require("./app/api-error");
 
-const accountRouter = require('./app/routes/taikhoan.route');
 const bookRouter = require("./app/routes/book.route");
 const phieumuonRouter = require("./app/routes/phieumuon.route");
+const accountRouter = require('./app/routes/taikhoan.route');
+
 const app = express();
 
 app.use(cors());
@@ -41,3 +42,4 @@ app.use((error, req, res, next) => {
 });
 
 module.exports = app;
+

@@ -1,20 +1,17 @@
 [
     {
-    "_id": "TK1",
-    "mataikhoan" : "B1910317",
-    "password":"123456",
-    "phanquyen": 1 
+        "mataikhoan": "B1910317",
+        "matkhau": "123456",
+        "phanquyen": 1
     },
     {
-        "_id": "TK2",
-        "mataikhoan" : "thuthu1",
-        "password":"123456",
-        "phanquyen": 2 
+        "mataikhoan":"TTKCNTT1",
+        "matkhau": "123456",
+        "phanquyen": 2
     },
     {
-        "_id": "TK3",
-        "mataikhoan" : "admin",
-        "password":"123456",
-        "phanquyen": 23
+        "mataikhoan": "Admin",
+        "matkhau": "123456",
+        "phanquyen": 3
     }
 ]

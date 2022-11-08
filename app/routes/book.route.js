@@ -12,10 +12,7 @@ router.route("/:id")
     .get(books.getId)
     .delete(books.delete)
     .put(books.update)
-// router.route("/:id")
-//     .get(books.findOne)
-//     .delete(books.delete)
-//     .put(books.update);
+
 
 
 module.exports = router;
