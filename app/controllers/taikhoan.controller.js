@@ -28,3 +28,4 @@ exports.findAccount = async (req, res, next) => {
     return next(new ApiError(500, "An error occured white find a account"));
   }
 };
+

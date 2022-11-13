@@ -25,7 +25,7 @@ class BookService {
   }
 
   async create(payload) {
-    console.log(payload);
+    // console.log(payload);
     const book = this.extractBookData(payload);
     const result = await this.Book.insertOne(
         book);

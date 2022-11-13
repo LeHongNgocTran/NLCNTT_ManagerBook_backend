@@ -2,7 +2,7 @@ const ApiError = require("../api-error");
 const BookService = require("../services/book.service");
 const MongoDB = require("../utils/mongodb.util");
 // tạo và lưu trữ một quyển sách mới
-exports.create = async (req, res) => {
+exports.create = async (req, res, next) => {
   if (!req.body?.tensach) {
     return next(new ApiError(400, "Name can not be empty"));
   }
@@ -22,7 +22,7 @@ exports.getAll = async (req, res, next) => {
     const { name } = req.query;
     if (name) {
       documents = await bookService.findByName(name);
-      console.log("find name",documents);
+      // console.log("find name",documents);
     } else {
       documents = await bookService.getAll();
       // console.log(documents);
@@ -35,10 +35,9 @@ exports.getAll = async (req, res, next) => {
 
 exports.getId = async (req, res, next) => {
   try {
-    console.log("fgg");
     const bookService = new BookService(MongoDB.client);
     const document = await bookService.findById(req.params.id);
-    console.log(document);
+    // console.log(document);
     if (!document) {
       return next(new ApiError(404, "Contact not found"));
     }

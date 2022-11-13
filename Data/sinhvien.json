@@ -3,78 +3,73 @@
         "mataikhoan": "B1910317",
         "masinhvien": "B1910317",
         "hoten": "Lê Hồng Ngọc Trân",
-        "ngaysinh": {
-            "$date": {
-                "$numberLong": "999907200000"
-            }
-        },
+        "ngaysinh": "08/09/2001",
         "diachi": "Hậu Giang",
         "lop": "DI19V7A7",
-        "sdt": "0389006211"
+        "sdt": "0389006211",
+        "email" : "tranb1910317@student.ctu.edu.vn",
+        "nienkhoa" : "Khóa 45",
+        "khoa": "Khoa Công Nghệ Thông Tin & Truyền Thông"
     },
     {
         "mataikhoan": "B1910402",
         "masinhvien": "B1910402",
         "hoten": "Trần Thị Kim Linh",
-        "ngaysinh": {
-            "$date": {
-                "$numberLong": "997833600000"
-            }
-        },
+        "ngaysinh": "15/08/2001",
         "diachi": "Đồng Tháp",
         "lop": "DI19V7A4",
-        "sdt": "0123456789"
+        "sdt": "0123456789",
+        "email" : "linhb1910402@student.ctu.edu.vn",
+        "nienkhoa" : "Khóa 45",
+        "khoa": "Khoa Công Nghệ Thông Tin & Truyền Thông"
+
     },
     {
         "mataikhoan": "B1910408",
         "masinhvien": "B1910408",
         "hoten": "Lê Thị Yến Lụa",
-        "ngaysinh": {
-            "$date": {
-                "$numberLong": "999795600000"
-            }
-        },
+        "ngaysinh": "09/07/2001",
         "diachi": "Hậu Giang",
         "lop": "DI19V7A8",
-        "sdt": "0123456789"
+        "sdt": "0123456789",
+        "email" : "luab1910408@student.ctu.edu.vn",
+        "nienkhoa" : "Khóa 45",
+        "khoa": "Khoa Công Nghệ Thông Tin & Truyền Thông"
     },
     {
         "mataikhoan": "B1910411",
         "masinhvien": "B1910411",
         "hoten": "Nguyễn Thị Huế Minh",
-        "ngaysinh": {
-            "$date": {
-                "$numberLong": "992563200000"
-            }
-        },
+        "ngaysinh": "15/06/2001",
         "diachi": "Vĩnh Long",
         "lop": "DI19V7A8",
-        "sdt": "0123456789"
+        "sdt": "0123456789",
+        "email" : "minhb1910411@student.ctu.edu.vn",
+        "nienkhoa" : "Khóa 45",
+        "khoa": "Khoa Công Nghệ Thông Tin & Truyền Thông"
     },
     {
         "mataikhoan": "B1910467",
         "masinhvien": "B1910467",
         "hoten": "Nguyễn Quốc Trạng",
-        "ngaysinh": {
-            "$date": {
-                "$numberLong": "987033600000"
-            }
-        },
+        "ngaysinh": "12/04/2001",
         "diachi": "Cà Mau",
         "lop": "DI19V7A8",
-        "sdt": "0123456789"
+        "sdt": "0123456789",
+        "email" : "trangb1910467@student.ctu.edu.vn",
+        "nienkhoa" : "Khóa 45",
+        "khoa": "Khoa Công Nghệ Thông Tin & Truyền Thông"
     },
     {
         "mataikhoan": "B1910468",
         "masinhvien": "B1910468",
         "hoten": "Nguyễn Linh Trâm",
-        "ngaysinh": {
-            "$date": {
-                "$numberLong": "992106000000"
-            }
-        },
+        "ngaysinh": "06'09'2001",
         "diachi": "Cần Thơ",
         "lop": "DI19F1A1",
-        "sdt": "0123456789"
+        "sdt": "0123456789",
+        "email" : "tramb1910468@student.ctu.edu.vn",
+        "nienkhoa" : "Khóa 45",
+        "khoa": "Khoa Công Nghệ Thông Tin & Truyền Thông"
     }
 ]

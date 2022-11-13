@@ -6,6 +6,7 @@ const ApiError = require("./app/api-error");
 const bookRouter = require("./app/routes/book.route");
 const phieumuonRouter = require("./app/routes/phieumuon.route");
 const accountRouter = require('./app/routes/taikhoan.route');
+const giahanRouter =  require('./app/routes/phieugiahan.route');
 
 const app = express();
 
@@ -20,6 +21,9 @@ app.use("/api/phieumuon",phieumuonRouter);
 
 //Router của tài khoản
 app.use("/api/account",accountRouter);
+
+// Router của phiêu gia hạn
+app.use("/api/phieugiahan",giahanRouter);
 
 //Router của phiếu mượn cần được gia hạn
 // Handle 404 respone
