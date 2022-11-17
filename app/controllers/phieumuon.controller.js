@@ -30,7 +30,7 @@ exports.getId = async (req, res, next) => {
   try {
     const phieumuonService = new PhieuMuonService(MongoDB.client);
     const document = await phieumuonService.findById(req.params.id);
-    console.log(document);
+    // console.log(document);
     if (!document) {
       return next(new ApiError(404, "Not Found"));
     }
@@ -52,8 +52,9 @@ exports.update = async (req, res, next) => {
     const document = await phieumuonService.update(req.params.id, req.body);
     // console.log(document);
     if (!document) {
-      return next(new ApiError(404, "Not update"));
+      return next(new ApiError(404, "Not update phieumuon"));
     }
+    console.log(document)
     return res.send(document);
   } catch (error) {
     return next(new ApiError(500, `Không thể duyệt được id=${req.params.id}`));

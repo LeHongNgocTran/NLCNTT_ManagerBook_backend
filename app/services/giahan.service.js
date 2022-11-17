@@ -8,6 +8,7 @@ class GiaHanService {
   extractGiaHanData(payload) {
     const phieugiahan = {
       maphieumuon: payload.maphieumuon,
+      masinhvien : payload.masinhvien,
       thoigiangiahan: payload.thoigiangiahan,
       trangthai: payload.trangthai,
     };
@@ -42,8 +43,28 @@ class GiaHanService {
       _id: new ObjectId(id),
     });
   }
+
+  async getInforUser(masinhvien) {
+    const result = this.GiaHan.aggregate([
+      {
+        $lookup: {
+          from: "phieumuon",
+          localField: "maphieumuon",
+          foreignField: "_id",
+          as: "thongtingiahan",
+        },
+      },
+      {
+        $unwind: "$thongtingiahan",
+      },
+      {$match : masinhvien}
+    ]);
+    // console.log( await result.toArray());
+    return await result.toArray();
+  }
+
   async getInforDetails(maphieumuon) {
-    console.log(maphieumuon);
+    // console.log(maphieumuon);
     const result = this.GiaHan.aggregate([
       {
         $lookup: {
@@ -58,11 +79,19 @@ class GiaHanService {
       },
       {
         $match: maphieumuon,
-        
       },
     ]);
-    // console.log(await result.toArray());
     return await result.toArray();
+  }
+  async duyetphieu(id, data) {
+    const filter = { _id: new ObjectId(id) };
+    // console.log(id,data);
+    const result = await this.GiaHan.findOneAndUpdate(
+      filter,
+      { $set: data },
+      { returnDocument: "after" }
+    );
+    return result.value;
   }
 }
 module.exports = GiaHanService;

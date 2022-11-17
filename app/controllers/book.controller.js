@@ -72,10 +72,10 @@ exports.update = async (req, res, next) => {
     const bookService = new BookService(MongoDB.client);
     const document = await bookService.update(req.params.id, req.body);
     if (!document) {
-      return next(new ApiError(404, "Contact not found"));
+      return next(new ApiError(404, "Book not found"));
     }
     return res.send({
-      message: "Contact was updated successfully",
+      message: "Book was updated successfully",
     });
   } catch (error) {
     return next(
@@ -84,19 +84,18 @@ exports.update = async (req, res, next) => {
   }
 };
 
-// exports.findAll = async (req, res, next) => {
-//   let documents = [];
-//   try {
-//     const bookService = new BookService(MongoDB.client);
-//     const { name } = req.query;
-//     if (name) {
-//       documents = await bookService.findByName(name);
-//       console.log("find name");
-//     } else {
-//       documents = await bookService.find({});
-//     }
-//   } catch (error) {
-//     return next(new ApiError(500, "An error occured while retrieve find"));
-//   }
-//   return res.send(documents);
-// };
+exports.updateTrangThai = async (req,res,next) => {
+  try {
+    const bookService = new BookService(MongoDB.client);
+    const document = await bookService.updateTrangThai(req.body);
+    console.log(req.body);
+    if(!document){
+      return next(new ApiError(404,"Book can update"))
+    }
+    console.log(document)
+    return res.send((document));
+  }
+  catch(error){
+    return next(new ApiError(500,"Error Update"))
+  }
+}

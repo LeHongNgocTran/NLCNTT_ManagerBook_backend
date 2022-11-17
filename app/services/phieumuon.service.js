@@ -39,7 +39,7 @@ class PhieuMuonService {
   }
 
   async create(payload) {
-    console.log(payload);
+    // console.log(payload);
     const phieumuon = this.extractPhieuMuonData(payload);
     // console.log(payload);
     const result = await this.PhieuMuon.insertOne(phieumuon);
@@ -61,6 +61,7 @@ class PhieuMuonService {
 
   async update(id, data) {
     const filter = { _id: id };
+    console.log(id)
     const result = await this.PhieuMuon.findOneAndUpdate(
       filter,
       { $set: data },

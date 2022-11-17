@@ -71,6 +71,12 @@ class BookService {
       name : {$regex: new RegExp(name)}
     });
   }
+
+  async updateTrangThai(data){
+    const result = data.forEach((e) => {
+      
+    } )
+  }
 }
 
 module.exports = BookService;

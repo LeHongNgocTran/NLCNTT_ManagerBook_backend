@@ -13,6 +13,6 @@ router.route("/:id")
     .delete(books.delete)
     .put(books.update)
 
-
-
+router.route("/QLSPM")
+    .post(books.updateTrangThai)
 module.exports = router;
