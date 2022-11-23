@@ -15,4 +15,5 @@ router.route("/:id")
 
 router.route("/QLSPM")
     .post(books.updateTrangThai)
+    
 module.exports = router;

@@ -86,13 +86,13 @@ exports.update = async (req, res, next) => {
 
 exports.updateTrangThai = async (req,res,next) => {
   try {
+    console.log(req.body.title);
+    console.log(req.body.trangthai);
     const bookService = new BookService(MongoDB.client);
     const document = await bookService.updateTrangThai(req.body);
-    console.log(req.body);
     if(!document){
-      return next(new ApiError(404,"Book can update"))
+      return next(new ApiError(404,"Book can't update"))
     }
-    console.log(document)
     return res.send((document));
   }
   catch(error){

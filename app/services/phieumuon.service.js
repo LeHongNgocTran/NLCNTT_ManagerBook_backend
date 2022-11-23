@@ -15,7 +15,8 @@ class PhieuMuonService {
       trangthai: payload.trangthai,
       danhsachsach: payload.danhsachsach,
       dateTimeStart: payload.dateTimeStart,
-      dateTimeEnd: payload.dateTimeEnd
+      dateTimeEnd: payload.dateTimeEnd,
+      thoigiantrasach: payload.thoigiantrasach
     };
     // Xóa trường không xác định
     Object.keys(phieumuon).forEach(
@@ -35,6 +36,7 @@ class PhieuMuonService {
         },
       },
     ]);
+    
     return await resultAll.toArray();
   }
 
@@ -52,21 +54,14 @@ class PhieuMuonService {
     });
   }
 
-  // async getInforByName(name){
-  //   const result = await this.PhieuMuon.findOne({
-  //     masinhvien: name
-  //   });
-  //   return result;
-  // }
-
   async update(id, data) {
     const filter = { _id: id };
-    console.log(id)
     const result = await this.PhieuMuon.findOneAndUpdate(
       filter,
       { $set: data },
       { returnDocument: "after" }
     );
+
     return result.value;
   }
 

@@ -73,9 +73,15 @@ class BookService {
   }
 
   async updateTrangThai(data){
-    const result = data.forEach((e) => {
-      
-    } )
+    console.log(data.title);
+    console.log(data.trangthai);
+    const result = await this.Book.findOneAndUpdate(
+      {tensach: data.title},
+      { $set: {trangthai: data.trangthai} },
+      { returnDocument: "after" }
+    );
+    console.log(result.value);
+    return result.value;
   }
 }
 
