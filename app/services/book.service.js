@@ -24,11 +24,25 @@ class BookService {
     return book;
   }
 
-  async create(payload) {
-    // console.log(payload);
-    const book = this.extractBookData(payload);
-    const result = await this.Book.insertOne(
-        book);
+  async create(file, payload) {
+    const book = this.extractBookData({ ...payload, imageUrl: file.name });
+    const fs = require("fs");
+    let folderPath =
+      "/home/ngoctran/project/Managerbook-vue/Managerbook/src/assets/images/Book";
+    try {
+      if (!fs.existsSync(folderPath)) {
+        fs.mkdirSync(folderPath);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+    file.mv(`${folderPath}/${file.name}`, function (err) {
+      if (err) {
+        console.log(err);
+        return res.status(500).send({ msg: "Error occured" });
+      }
+    });
+    const result = await this.Book.insertOne(book);
     return result.value;
   }
 
@@ -50,37 +64,58 @@ class BookService {
     return result.value;
   }
 
-  async update(id, payload) {
+  async update(id, file, payload) {
     const filter = { _id: new ObjectId(id) };
-    const update = this.extractBookData(payload);
+    var update = {};
+    if (!file) {
+      update = this.extractBookData(payload);
+      console.log(update); }
+    else {
+
+      update = this.extractBookData({
+        ...payload,
+        imageUrl: file.name
+      });
+      console.log(update);
+      let folderPath =
+        "/home/ngoctran/project/Managerbook-vue/Managerbook/src/assets/images/Book";
+      file.mv(`${folderPath}/${file.name}`, function (err) {
+        if (err) {
+          console.log(err);
+          return res.status(500).send({ msg: "Error occured" });
+        }
+      });
+    }
+    // console.log(2);
     const result = await this.Book.findOneAndUpdate(
       filter,
       { $set: update },
       { returnDocument: "after" }
     );
+    // console.log(result.value);
     return result.value;
   }
 
-  async find(filter){
+  async find(filter) {
     const cursor = await this.Book.find(filter);
     return await cursor.toArray();
   }
 
-  async findByName(name){
+  async findByName(name) {
     return await this.find({
-      name : {$regex: new RegExp(name)}
+      name: { $regex: new RegExp(name) },
     });
   }
 
-  async updateTrangThai(data){
+  async updateTrangThai(data) {
     console.log(data.title);
     console.log(data.trangthai);
     const result = await this.Book.findOneAndUpdate(
-      {tensach: data.title},
-      { $set: {trangthai: data.trangthai} },
+      { tensach: data.title },
+      { $set: { trangthai: data.trangthai } },
       { returnDocument: "after" }
     );
-    console.log(result.value);
+    // console.log(result.value);
     return result.value;
   }
 }

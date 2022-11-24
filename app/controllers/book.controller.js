@@ -3,12 +3,9 @@ const BookService = require("../services/book.service");
 const MongoDB = require("../utils/mongodb.util");
 // tạo và lưu trữ một quyển sách mới
 exports.create = async (req, res, next) => {
-  if (!req.body?.tensach) {
-    return next(new ApiError(400, "Name can not be empty"));
-  }
   try {
     const bookService = new BookService(MongoDB.client);
-    const document = await bookService.create(req.body);
+    const document = await bookService.create(req.files.file, req.body);
     return res.send(document);
   } catch (error) {
     return next(new ApiError(500, "An error occured while creating"));
@@ -22,10 +19,8 @@ exports.getAll = async (req, res, next) => {
     const { name } = req.query;
     if (name) {
       documents = await bookService.findByName(name);
-      // console.log("find name",documents);
     } else {
       documents = await bookService.getAll();
-      // console.log(documents);
     }
   } catch (error) {
     return next(new ApiError(500, "An error occured while get book"));
@@ -67,35 +62,47 @@ exports.update = async (req, res, next) => {
   if (Object.keys(req.body).length === 0) {
     return next(new ApiError(400, "Data to update can not be empty"));
   }
-
   try {
     const bookService = new BookService(MongoDB.client);
-    const document = await bookService.update(req.params.id, req.body);
+    if (!req.files) {
+    var  document = await bookService.update(
+        req.params.id,
+        null,
+        req.body
+      );
+    }
+    else {
+      var document = await bookService.update(
+        req.params.id,
+        req.files.file,
+        req.body
+      )
+    }
+
     if (!document) {
       return next(new ApiError(404, "Book not found"));
     }
+
     return res.send({
       message: "Book was updated successfully",
     });
-  } catch (error) {
+  } 
+  catch (error) {
     return next(
       new ApiError(500, `Error updating contact with id=${req.params.id}`)
     );
   }
 };
 
-exports.updateTrangThai = async (req,res,next) => {
+exports.updateTrangThai = async (req, res, next) => {
   try {
-    console.log(req.body.title);
-    console.log(req.body.trangthai);
     const bookService = new BookService(MongoDB.client);
     const document = await bookService.updateTrangThai(req.body);
-    if(!document){
-      return next(new ApiError(404,"Book can't update"))
+    if (!document) {
+      return next(new ApiError(404, "Book can't update"));
     }
-    return res.send((document));
+    return res.send(document);
+  } catch (error) {
+    return next(new ApiError(500, "Error Update"));
   }
-  catch(error){
-    return next(new ApiError(500,"Error Update"))
-  }
-}
+};

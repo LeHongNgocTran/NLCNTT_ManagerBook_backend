@@ -1,6 +1,7 @@
 // Khai báo
 const express = require("express");
 const cors = require("cors");
+const fileUpload = require("express-fileupload")
 const ApiError = require("./app/api-error");
 
 const bookRouter = require("./app/routes/book.route");
@@ -12,6 +13,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(fileUpload());
 
 // Router của sách
 app.use("/api/book",bookRouter);

@@ -18,7 +18,6 @@ exports.getAllPhieu = async (req, res, next) => {
 exports.create = async (req, res, next) => {
   try {
     const phieumuonService = new PhieuMuonService(MongoDB.client);
-    // console.("create");
     const document = await phieumuonService.create(req.body);
     return res.send(document);
   } catch (error) {
