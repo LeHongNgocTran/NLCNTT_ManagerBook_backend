@@ -123,7 +123,7 @@ class GiaHanService {
         "<h4>ĐƠN GIA HẠN CỦA BẠN ĐÃ ĐƯỢC DUYỆT</h4>" +
         "<p>Thời hạn phiếu mượn được kéo dài đến : " 
         + formattime + "</p>" +
-        "<strong>Vui lòng trả trong khoảng thời gian gia hạn này. Nếu không bạn sẽ bị phạt tiền 5000 VNĐ / cuốn </strong>" 
+        "<strong>Vui lòng trả trong khoảng thời gian gia hạn này. Nếu không bạn sẽ bị phạt tiền 5000 VNĐ/ngàycuốn </strong>" 
         +"<h6>TRÂN TRỌNG CÁM ƠN !</h6>"// html body
     };
 
