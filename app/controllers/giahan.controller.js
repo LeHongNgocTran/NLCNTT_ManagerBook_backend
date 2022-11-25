@@ -5,10 +5,8 @@ const PhieuGiaHanService = require("../services/giahan.service");
 exports.getAllPhieuGiaHan = async (req, res, next) => {
   let documents = [];
   try {
-    // console.log('avc');
     const phieugiahanService = new PhieuGiaHanService(MongoDB.client);
     documents = await phieugiahanService.getAllPhieuGiaHan();
-    // console.log(documents);
   } catch (error) {
     return next(new ApiError(500, "Can not get phieu muon"));
   }
@@ -19,7 +17,6 @@ exports.createPhieuGiaHan = async (req, res, next) => {
   try {
     const phieugiahanService = new PhieuGiaHanService(MongoDB.client);
     const document = await phieugiahanService.create(req.body);
-    // console.log(document);
     return res.send(document);
   } catch (error) {
     return next(new ApiError(500, "Không thể tạo phiêu gia hạn"));
@@ -48,16 +45,15 @@ exports.getInforDetails = async (req, res, next) => {
     return next(new ApiError(500, "Không thể lấy "));
   }
 };
+
 exports.getInforUser = async (req, res, next) => {
   let documents = [];
   try {
-    // console.log(req.body);
     const phieugiahanService = new PhieuGiaHanService(MongoDB.client);
     documents = await phieugiahanService.getInforUser(req.body);
     if (!documents) {
       return next(new ApiError(404, "Not found"));
     }
-    // console.log(documents);
   } catch (error) {
     return next(new ApiError(500, "Không thể lấy thông tin user" ));
   }
@@ -66,10 +62,8 @@ exports.getInforUser = async (req, res, next) => {
 
 exports.getAllPhieuGiaHanByMSSV = async (req, res, next) => {
   try {
-    // console.log(req.body);
     const phieugiahanService = new PhieuGiaHanService(MongoDB.client);
     const document = await phieugiahanService.getAllPhieuGiaHanByMSSV(req.body);
-    console.log(document);
     return res.send(document);
   } catch (error) {
     return next(new ApiError(500, 'Không thể lấy theo id'));
@@ -78,10 +72,8 @@ exports.getAllPhieuGiaHanByMSSV = async (req, res, next) => {
 
 exports.duyetphieu = async (req, res,next) => {
   try {
-    console.log(req.body);
     const phieugiahanService = new PhieuGiaHanService(MongoDB.client);
     const document = await phieugiahanService.duyetphieu(req.params.id,req.body);
-    console.log(document);
     if (!document) {
       return next(new ApiError(404, "Not update phieugiahan"));
     }

@@ -60,12 +60,10 @@ class GiaHanService {
       },
       {$match : masinhvien}
     ]);
-    // console.log( await result.toArray());
     return await result.toArray();
   }
 
   async getInforDetails(maphieumuon) {
-    // console.log(maphieumuon);
     const result = this.GiaHan.aggregate([
       {
         $lookup: {
@@ -124,7 +122,9 @@ class GiaHanService {
         "<p>Thời hạn phiếu mượn được kéo dài đến : " 
         + formattime + "</p>" +
         "<strong>Vui lòng trả trong khoảng thời gian gia hạn này. Nếu không bạn sẽ bị phạt tiền 5000 VNĐ/ngàycuốn </strong>" 
-        +"<h6>TRÂN TRỌNG CÁM ƠN !</h6>"// html body
+        +"<h6>TRÂN TRỌNG CÁM ƠN !</h6>"
+        + "<h2>VUI LÒNG KHÔNG PHẢN HỒI MAIL NÀY| "
+        // html body
     };
 
     transporter.sendMail(infor, function (err,infor){
