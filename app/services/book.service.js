@@ -108,8 +108,8 @@ class BookService {
   }
 
   async updateTrangThai(data) {
-    console.log(data.title);
-    console.log(data.trangthai);
+    // console.log(data.title);
+    // console.log(data.trangthai);
     const result = await this.Book.findOneAndUpdate(
       { tensach: data.title },
       { $set: { trangthai: data.trangthai } },

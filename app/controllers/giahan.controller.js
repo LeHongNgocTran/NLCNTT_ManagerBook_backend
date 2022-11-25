@@ -81,6 +81,7 @@ exports.duyetphieu = async (req, res,next) => {
     console.log(req.body);
     const phieugiahanService = new PhieuGiaHanService(MongoDB.client);
     const document = await phieugiahanService.duyetphieu(req.params.id,req.body);
+    console.log(document);
     if (!document) {
       return next(new ApiError(404, "Not update phieugiahan"));
     }

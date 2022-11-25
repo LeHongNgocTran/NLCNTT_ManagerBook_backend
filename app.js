@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const fileUpload = require("express-fileupload")
 const ApiError = require("./app/api-error");
-
+require('dotenv').config();
 const bookRouter = require("./app/routes/book.route");
 const phieumuonRouter = require("./app/routes/phieumuon.route");
 const accountRouter = require('./app/routes/taikhoan.route');
