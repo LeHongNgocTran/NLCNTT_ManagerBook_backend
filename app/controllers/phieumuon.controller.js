@@ -19,7 +19,8 @@ exports.create = async (req, res, next) => {
   try {
     const phieumuonService = new PhieuMuonService(MongoDB.client);
     const document = await phieumuonService.create(req.body);
-    return res.send(document);
+    // console.log(document);
+    return await res.send(document);
   } catch (error) {
     return next(new ApiError(500, "Không thể tạo phiêu mượn"));
   }

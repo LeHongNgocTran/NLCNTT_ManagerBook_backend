@@ -4,8 +4,11 @@ const MongoDB = require("../utils/mongodb.util");
 // tạo và lưu trữ một quyển sách mới
 exports.create = async (req, res, next) => {
   try {
+    // console.log(req.file, req.body);
     const bookService = new BookService(MongoDB.client);
     const document = await bookService.create(req.files.file, req.body);
+    // console.log(1);
+    // console.log(document);
     return res.send(document);
   } catch (error) {
     return next(new ApiError(500, "An error occured while creating"));

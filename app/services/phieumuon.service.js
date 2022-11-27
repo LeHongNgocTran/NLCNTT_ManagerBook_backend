@@ -45,6 +45,7 @@ class PhieuMuonService {
     const phieumuon = this.extractPhieuMuonData(payload);
     // console.log(payload);
     const result = await this.PhieuMuon.insertOne(phieumuon);
+    // console.log(result.value);
     return result.value;
   }
 

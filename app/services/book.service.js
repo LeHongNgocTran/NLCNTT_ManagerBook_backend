@@ -26,6 +26,8 @@ class BookService {
 
   async create(file, payload) {
     const book = this.extractBookData({ ...payload, imageUrl: file.name });
+    // console.log(file);
+    // console.log(payload);
     const fs = require("fs");
     let folderPath =
       "/home/ngoctran/project/Managerbook-vue/Managerbook/src/assets/images/Book";
