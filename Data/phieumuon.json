@@ -1,3 +1,11 @@
 [
-   {"maphieumuon":{"$numberInt":"1"},"mataikhoan":"B1910317"}
+    {
+        "masinhvien" : null,
+        "hoten" : null,
+        "trangthai": false,
+        "danhsachsach": null,
+        "dateTimeStart": null,
+        "dateTimeEnd" : null,
+        "thoigiantrasach": ""
+    }
 ]

@@ -1,3 +1,8 @@
 [
-    {"mataikhoan":"B1910317","thoigiangiahan":{"$date":{"$numberLong":"1665446400000"}},"maphieumuon":{"$numberInt":"1"}}
+    {
+        "masinhvien": null,
+        "maphieumuon" : null,
+        "thoigiangiahan" : null,
+        "trangthai": false
+    }
 ]
